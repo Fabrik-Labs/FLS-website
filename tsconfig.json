@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "jsxImportSource": "astro",
+    "allowJs": true,
+    "checkJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": [
+      "astro/client"
+    ]
+  }
+}

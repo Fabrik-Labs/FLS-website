@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import TestimonialBlock from '../../components/TestimonialBlock.astro';
+import StatBlock from '../../components/StatBlock.astro';
+---
+
+<BaseLayout title="The Autism Helper - Case Study - Fabrik Labs">
+  <Nav />
+
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <section class="bg-charcoal text-white pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-teal-light mb-6">Ed-Tech</p>
+        <h1 class="font-serif text-40px md:text-72px font-medium leading-tight text-white mb-6">The Autism Helper</h1>
+        <p class="font-sans text-16px md:text-18px text-slate max-w-[700px]">
+          From 50-step workarounds to a scalable platform partner
+        </p>
+      </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Challenge</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          The Autism Helper's aging WordPress/WooCommerce setup was holding back growth. The team wrestled with 15-second load times, unreliable developer support, and complex workarounds. Customers were asking for features the platform simply couldn't deliver.
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-warm-gray-mid py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Solution</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          Fabrik Labs built a scalable new platform using modern development tools. We moved quickly through discovery, delivered an MVP that mirrored existing workflows for familiarity, and added the most-requested features. Just as important, we established a partnership focused on continuous improvement and long-term growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image Placeholder -->
+    <section class="bg-warm-gray py-12 md:py-16 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <img src="/images/case-studies/TAH-feature-01.png" alt="The Autism Helper platform" class="w-full rounded" />
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Outcome</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px mb-12">
+          The new platform streamlined operations and reduced stress. Renewal workflows that once took dozens of steps now run seamlessly across 450+ accounts. Performance improved dramatically, customer-requested features are live, and the team can focus on growth instead of firefighting.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex flex-col md:flex-row gap-16 justify-center max-w-800px">
+          <StatBlock value="5X" label="Faster load times" />
+          <StatBlock value="50%" label="Faster renewal process" />
+          <StatBlock value="#1" label="User-requested feature added" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <TestimonialBlock
+      quote="The most impressive thing about our project with Fabrik was their quick understanding of our very unique product and business model…"
+      name="Sasha Long"
+      title="Founder and President, The Autism Helper"
+      initials="SL"
+    />
+
+    <!-- CTA Section -->
+    <CTA
+      heading="Ready to talk?"
+      body="Let's discuss how we can help you achieve similar results."
+      buttonLabel="Schedule a Call"
+      buttonHref="https://cal.com/fabrikbrad/1h-discovery"
+      bgColor="bg-warm-gray"
+    />
+  </div>
+
+  <Footer />
+</BaseLayout>

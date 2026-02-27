@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import TestimonialBlock from '../../components/TestimonialBlock.astro';
+---
+
+<BaseLayout title="Alliance for Decision Education - Case Study - Fabrik Labs">
+  <Nav />
+
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <section class="bg-charcoal text-white pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-teal-light mb-6">Ed-Tech</p>
+        <h1 class="font-serif text-40px md:text-72px font-medium leading-tight text-white mb-6">Alliance for Decision Education</h1>
+        <p class="font-sans text-16px md:text-18px text-slate max-w-[700px]">
+          From solution-first to user-centered
+        </p>
+      </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Challenge</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          The Alliance needed a scalable way to bring decision-making skills into classrooms—but they kept reaching for solutions before fully understanding what teachers actually needed. Without validated user insights, they risked building tools that wouldn't work in real classroom environments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-warm-gray-mid py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Solution</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          Fabrik Labs started by slowing things down. We explored multiple directions before committing to build anything. Once a clear winner emerged—an AI-powered tool that could enhance teachers' existing lesson plans—we moved into prototyping with disciplined sprints, clear timeboxes, and strong product ownership.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image Placeholder -->
+    <section class="bg-warm-gray py-12 md:py-16 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <img src="/images/case-studies/ADE-feature-01.png" alt="Alliance for Decision Education platform" class="w-full rounded" />
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Outcome</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          The Alliance now has a working AI-driven prototype that enhances teachers' lesson plans with decision education content. More importantly, the project shifted how the organization approaches product development, proving that lean methods and user-centered thinking deliver results.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <TestimonialBlock
+      quote="The tool itself is a great success, but the process we followed—and the proof to ourselves that we can do it—is almost equally as impactful."
+      name="Sarah Smirnoff"
+      title="Director of Education, Alliance for Decision Education"
+      initials="SS"
+    />
+
+    <!-- CTA Section -->
+    <CTA
+      heading="Ready to talk?"
+      body="Let's discuss how we can help you achieve similar results."
+      buttonLabel="Schedule a Call"
+      buttonHref="https://cal.com/fabrikbrad/1h-discovery"
+      bgColor="bg-warm-gray"
+    />
+  </div>
+
+  <Footer />
+</BaseLayout>

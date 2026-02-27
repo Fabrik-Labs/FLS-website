@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  industry: string;
+  title: string;
+  subtitle: string;
+  image?: string;
+}
+
+const { href, industry, title, subtitle, image } = Astro.props;
+---
+
+<a href={href} class="bg-white border border-warm-gray-dark rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200 block">
+  <!-- Image placeholder -->
+  <div class="bg-slate w-full h-200px flex items-center justify-center overflow-hidden">
+    {image ? (
+      <img src={image} alt={title} class="w-full h-full object-cover" />
+    ) : (
+      <div class="text-slate-light font-sans text-14px">Image placeholder</div>
+    )}
+  </div>
+
+  <!-- Content -->
+  <div class="p-8">
+    <p class="font-sans text-12px font-semibold uppercase text-copper tracking-1.4px mb-4">{industry}</p>
+    <h3 class="font-sans text-18px font-semibold text-charcoal mb-3">{title}</h3>
+    <p class="font-sans text-14px text-slate">{subtitle}</p>
+  </div>
+</a>

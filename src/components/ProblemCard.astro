@@ -1,0 +1,18 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const { number, title, description } = Astro.props;
+---
+
+<div class="bg-white border border-warm-gray-dark p-10 rounded hover:-translate-y-1 hover:shadow-lg transition-all duration-200 relative overflow-hidden group">
+  <!-- Top border that scales in on hover -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-teal origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+
+  <p class="font-serif text-48px font-medium text-teal opacity-35 mb-4">{number}</p>
+  <h3 class="font-sans text-18px font-semibold text-charcoal mb-4">{title}</h3>
+  <p class="font-sans text-16px text-slate leading-relaxed">{description}</p>
+</div>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import Hero from '../../components/Hero.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+};
+---
+
+<BaseLayout title="Blog - Fabrik Labs">
+  <Nav />
+  
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <Hero 
+      label="Blog"
+      title="Shop notes"
+      subtitle="Thoughts on custom software, product design, and building tools for mission-driven teams."
+      darkBg={false}
+    />
+
+    <!-- Blog Posts -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-800px mx-auto">
+        <div class="space-y-8">
+          {posts.map((post) => (
+            <div class="pb-8 border-b border-warm-gray-dark last:border-b-0">
+              <a href={`/blog/${post.slug}`} class="block group">
+                <h3 class="font-sans text-18px font-semibold text-charcoal mb-2 group-hover:text-teal transition-colors">
+                  {post.data.title}
+                </h3>
+                <p class="font-sans text-14px text-slate">
+                  {formatDate(post.data.date)}
+                </p>
+              </a>
+              <p class="font-sans text-16px text-slate mt-3">
+                {post.data.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</BaseLayout>

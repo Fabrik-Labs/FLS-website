@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CTA from '../../components/CTA.astro';
+import TestimonialBlock from '../../components/TestimonialBlock.astro';
+import StatBlock from '../../components/StatBlock.astro';
+---
+
+<BaseLayout title="4MyCiTy - Case Study - Fabrik Labs">
+  <Nav />
+
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <section class="bg-charcoal text-white pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-teal-light mb-6">Nonprofit</p>
+        <h1 class="font-serif text-40px md:text-72px font-medium leading-tight text-white mb-6">4MyCiTy</h1>
+        <p class="font-sans text-16px md:text-18px text-slate max-w-[700px]">
+          From manual check-ins to seamless food rescue tracking
+        </p>
+      </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Challenge</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          4MyCiTy relied on manual check-ins and spreadsheets to manage data tracking. Participants faced long waits, data was inconsistent, and reporting took far too much time. To scale its mission, the organization needed a faster, more reliable way to track activity and share results.
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="bg-warm-gray-mid py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Solution</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px">
+          Fabrik Labs built a new mobile platform designed for speed and accuracy. QR scans now process instantly, food saved is tracked more accurately, and reports are generated in real time. The system matches 4MyCiTy's workflows while reducing friction for volunteers in the field.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image Placeholder -->
+    <section class="bg-warm-gray py-12 md:py-16 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <img src="/images/case-studies/4MC-feature-01.png" alt="4MyCiTy platform" class="w-full rounded" />
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-8">The Outcome</p>
+        <p class="font-sans text-18px text-charcoal-light leading-relaxed max-w-800px mb-12">
+          The new platform gave 4MyCiTy the foundation to grow. Staff complete check-ins in seconds, leaders have trustworthy data at their fingertips, and funders see measurable impact with every report.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex flex-col md:flex-row gap-16 justify-center max-w-800px">
+          <StatBlock value="3X" label="Faster check-ins" />
+          <StatBlock value="5,000+" label="Participants served per month" />
+          <StatBlock value="4.9" label="Star rating in app stores" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <TestimonialBlock
+      quote="Finally a way we can track how much we save and help us see what we actually get."
+      name="5-Star Reviewer"
+      title="4MyCiTy Participant"
+      initials="4M"
+    />
+
+    <!-- CTA Section -->
+    <CTA
+      heading="Ready to talk?"
+      body="Let's discuss how we can help you achieve similar results."
+      buttonLabel="Schedule a Call"
+      buttonHref="https://cal.com/fabrikbrad/1h-discovery"
+      bgColor="bg-warm-gray"
+    />
+  </div>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+};
+---
+
+<BaseLayout title={`${post.data.title} - Fabrik Labs`}>
+  <Nav />
+  
+  <div class="pt-80px">
+    <!-- Post Header -->
+    <section class="bg-charcoal text-white py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-800px mx-auto">
+        <h1 class="font-serif text-40px md:text-48px font-medium text-white mb-6">
+          {post.data.title}
+        </h1>
+        <p class="font-sans text-16px text-slate-light">
+          {post.data.author && <span>{post.data.author} &middot; </span>}{formatDate(post.data.date)}
+        </p>
+      </div>
+    </section>
+
+    {/* Featured Image */}
+    {post.data.featuredImage && (
+      <section class="bg-warm-gray pt-12 md:pt-16 px-6 md:px-24">
+        <div class="max-w-800px mx-auto">
+          <img src={post.data.featuredImage} alt={post.data.title} class="w-full rounded" />
+        </div>
+      </section>
+    )}
+
+    <!-- Post Content -->
+    <section class="bg-warm-gray pt-10 md:pt-12 pb-24 md:pb-32 px-6 md:px-24">
+      <article class="prose max-w-800px mx-auto text-charcoal">
+        <Content />
+      </article>
+    </section>
+
+    <!-- Back to Blog Link -->
+    <section class="bg-warm-gray px-6 md:px-24 pb-12">
+      <div class="max-w-800px mx-auto">
+        <a href="/blog" class="font-sans text-16px font-semibold text-teal hover:text-teal-dark transition-colors">
+          Back to Blog
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</BaseLayout>

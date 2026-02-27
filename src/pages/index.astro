@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import CTA from '../components/CTA.astro';
+import TestimonialBlock from '../components/TestimonialBlock.astro';
+import ProblemCard from '../components/ProblemCard.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+---
+
+<BaseLayout title="Fabrik Labs - Custom Software for Nonprofits">
+  <Nav />
+  
+  <!-- Add top padding to account for fixed nav -->
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <section class="bg-charcoal pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-24 relative">
+      <div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at 50% 0%, #2B9C9C, transparent 70%)"></div>
+      <div class="max-w-1200px mx-auto relative z-10">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-teal-light mb-6">Custom Software for Mission-Driven Teams</p>
+        <h1 class="font-serif text-40px md:text-72px font-medium leading-tight text-white mb-6">You've outgrown your tools. <span class="text-teal-light">We help you build the right ones.</span></h1>
+        <p class="font-sans text-16px md:text-18px text-slate-light max-w-800px mb-8 md:mb-12">Fabrik Labs partners with nonprofits and ed-tech teams to design and build custom software that fits how you actually work.</p>
+        <a href="https://cal.com/fabrikbrad/1h-discovery" class="inline-block px-8 py-4 bg-teal-light text-charcoal rounded font-sans text-16px font-semibold hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">Let's Talk</a>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-copper mb-6">The Problem</p>
+        <h2 class="font-serif text-40px md:text-48px font-medium text-charcoal mb-12 md:mb-16">Sound familiar?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ProblemCard 
+            number="01"
+            title="Paying for 'almost right'"
+            description="You're spending money on off-the-shelf software that's almost right—but not quite. The workarounds are piling up, and your team is frustrated."
+          />
+          <ProblemCard 
+            number="02"
+            title="Tools can't keep up"
+            description="Your team has grown and your tools are struggling to keep up. What worked at 5 people doesn't work at 25. You're hitting walls everywhere."
+          />
+          <ProblemCard 
+            number="03"
+            title="Your team is the glue"
+            description="Your systems don't talk to each other, so your team spends hours copying data between tools and tracking things manually."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section class="bg-warm-gray-mid py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-copper mb-6">Who We Serve</p>
+            <h2 class="font-serif text-40px md:text-48px font-medium text-charcoal mb-6">We work with small mission-driven teams</h2>
+            <p class="font-sans text-16px text-charcoal leading-relaxed">Especially nonprofits and ed-tech organizations. Our approach pairs experienced guidance with modern development practices. It also works well for growing SMBs, but the mission-driven ones are where we do our best work.</p>
+          </div>
+          
+          <!-- Decorative squares (percentage-based, hidden on small screens) -->
+          <div class="relative hidden md:block w-full" style="padding-bottom: 100%;">
+            <div class="absolute top-0 left-0 w-[60%] h-[60%]" style="background:rgba(43,156,156,0.15)"></div>
+            <div class="absolute top-[25%] left-[25%] w-[50%] h-[50%]" style="background:rgba(43,156,156,0.3)"></div>
+            <div class="absolute top-[60%] left-[60%] w-[40%] h-[40%]" style="background:rgba(43,156,156,0.6)"></div>
+            <div class="absolute top-0 left-[70.6%] w-[29.4%] h-[29.4%]" style="background:#C75B3F"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <TestimonialBlock 
+      quote="The tool itself is a great success, but the process we followed—and the proof to ourselves that we can do it—is almost equally as impactful."
+      name="Sarah Smirnoff"
+      title="Alliance for Decision Education"
+      initials="SS"
+    />
+
+    <!-- Clients Bar -->
+    <section class="bg-warm-gray-mid border-t border-warm-gray-dark py-16 md:py-24 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-12px font-bold uppercase tracking-5px text-slate mb-12 text-center">Trusted By</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <img src="/images/logos/tah-logo.png" alt="The Autism Helper" class="h-20 w-auto" />
+          <img src="/images/logos/ade-logo.svg" alt="Alliance for Decision Education" class="h-20 w-auto" />
+          <img src="/images/logos/4mc-logo.webp" alt="4MyCiTy" class="h-20 w-auto" />
+          <img src="/images/logos/mosaic-logo.png" alt="Mosaic" class="h-14 w-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA 
+      heading="Ready to talk?"
+      body="Schedule a 30-minute call. No commitment, no pitch—just a conversation about what you're dealing with."
+      buttonLabel="Let's Talk"
+      buttonHref="https://cal.com/fabrikbrad/1h-discovery"
+      bgColor="bg-warm-gray"
+    />
+  </div>
+
+  <Footer />
+</BaseLayout>

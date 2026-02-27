@@ -1,0 +1,36 @@
+---
+interface Props {
+  quote: string;
+  name: string;
+  title: string;
+  initials: string;
+}
+
+const { quote, name, title, initials } = Astro.props;
+---
+
+<section class="bg-charcoal text-white py-16 md:py-24 px-6 md:px-24 lg:px-[120px] relative overflow-hidden">
+  <div class="max-w-1200px mx-auto relative">
+    <!-- Decorative background curly quote: indented from container edge (body copy), but left of pull quote text -->
+    <div class="absolute font-serif italic leading-none select-none pointer-events-none" style="font-size: 448px; color: rgba(43, 156, 156, 0.16); transform: rotate(-8deg); top: -60px; left: 5px;">
+      &ldquo;
+    </div>
+
+    <!-- Pull quote content: indented further right than decorative quote -->
+    <div class="relative z-10" style="padding-left: 160px;">
+      <!-- Quote text -->
+      <p class="font-serif text-[30px] italic text-white mb-10 max-w-[752px] leading-[1.5]"><span class="text-teal-light">&ldquo;</span>{quote}<span class="text-teal-light">&rdquo;</span></p>
+
+      <!-- Author -->
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 bg-teal flex items-center justify-center flex-shrink-0">
+          <span class="font-sans font-semibold text-white text-[20px]">{initials}</span>
+        </div>
+        <div>
+          <p class="font-sans font-semibold text-16px text-white">{name}</p>
+          <p class="font-sans text-14px text-slate">{title}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

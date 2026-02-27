@@ -1,0 +1,27 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  variant?: 'default' | 'large' | 'teal';
+  class?: string;
+}
+
+const { href, label, variant = 'default', class: className = '' } = Astro.props;
+
+const getClasses = () => {
+  const base = 'font-sans font-semibold rounded hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 inline-block text-center';
+  
+  switch (variant) {
+    case 'large':
+      return `${base} px-8 py-4 text-16px bg-charcoal text-white`;
+    case 'teal':
+      return `${base} px-8 py-4 text-16px bg-teal text-white`;
+    default:
+      return `${base} px-6 py-3.5 text-14px bg-charcoal text-white`;
+  }
+};
+---
+
+<a href={href} class={`${getClasses()} ${className}`}>
+  {label}
+</a>

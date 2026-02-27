@@ -1,0 +1,8 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Small white square icon -->
+  <rect x="0" y="8" width="24" height="24" fill="white" rx="3"/>
+  
+  <!-- Fabrik Labs text in white -->
+  <text x="32" y="28" font-family="IBM Plex Serif, serif" font-size="20" font-weight="500" fill="white">Fabrik</text>
+  <text x="95" y="28" font-family="IBM Plex Serif, serif" font-size="20" font-weight="500" fill="white">Labs</text>
+</svg>

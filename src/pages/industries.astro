@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<BaseLayout title="Industries - Fabrik Labs">
+  <Nav />
+
+  <div class="pt-80px">
+    <!-- Hero Section -->
+    <section class="bg-charcoal pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <p class="font-sans text-14px font-semibold uppercase tracking-1.4px text-teal-light mb-6">Industries</p>
+        <h1 class="font-serif text-40px md:text-48px font-medium leading-tight text-white mb-6 md:mb-8">Who we work with</h1>
+        <p class="font-sans text-16px md:text-18px text-slate-light leading-relaxed max-w-800px">
+          We focus on nonprofits and ed-tech organizations. Like any team, they're struggling with systems that can't keep up with growth. But they also tend to have tighter budgets and fewer internal resources—which means they need partners who can stretch a dollar and make good decisions the first time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Industry Cards Section -->
+    <section class="bg-warm-gray py-24 md:py-32 px-6 md:px-24">
+      <div class="max-w-1200px mx-auto">
+        <!-- Two main industry cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <!-- Nonprofits Card -->
+          <div class="bg-white border border-warm-gray-dark p-12 rounded">
+            <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-4">Nonprofits</p>
+            <h3 class="font-sans text-18px font-semibold text-charcoal mb-6">We understand the mission comes first.</h3>
+            <p class="font-sans text-16px text-slate leading-relaxed">
+              As volunteers and members of nonprofit boards ourselves, we understand the unique challenges: managing grants, coordinating volunteers, board reporting, and choosing between "good enough" tools and ones that actually fit. We build donor portals, program dashboards, volunteer systems, and internal tools that tie everything together.
+            </p>
+          </div>
+
+          <!-- Ed-Tech Card -->
+          <div class="bg-white border border-warm-gray-dark p-12 rounded">
+            <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-4">Ed-Tech</p>
+            <h3 class="font-sans text-18px font-semibold text-charcoal mb-6">Built for how learning actually happens.</h3>
+            <p class="font-sans text-16px text-slate leading-relaxed">
+              Ed-tech organizations have their own idiosyncrasies—student data, curriculum delivery, educator tools, compliance requirements. They're often stuck with platforms that weren't built for how learning actually works. We build student progress trackers, curriculum platforms, admin tools, and the connective tissue that makes it all work together.
+            </p>
+          </div>
+        </div>
+
+        <!-- Small & Midsize Businesses -->
+        <div class="text-center">
+          <p class="font-sans text-14px font-semibold uppercase text-copper tracking-1.4px mb-4">Small & Midsize Businesses</p>
+          <p class="font-sans text-16px text-slate leading-relaxed max-w-800px mx-auto">
+            The same challenges that plague nonprofits and ed-tech—outgrown tools, disconnected systems, limited resources—hit growing SMBs too. In fact, it's where our leadership came from. While our focus is mission-driven organizations, we're happy to work with SMBs facing similar problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA
+      heading="Sound like your situation?"
+      body="Let's talk about what you're working on."
+      buttonLabel="Let's Talk"
+      buttonHref="https://cal.com/fabrikbrad/1h-discovery"
+      bgColor="bg-warm-gray-mid"
+    />
+  </div>
+
+  <Footer />
+</BaseLayout>
