@@ -13,7 +13,7 @@ const {
   ogImage = '/images/og-default.png'
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, 'https://www.fabriklabs.co');
+const canonicalURL = new URL(Astro.url.pathname, 'https://fabriklabs.co');
 ---
 
 <!doctype html>
@@ -29,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://www.fabriklabs.co');
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, 'https://www.fabriklabs.co').href} />
+    <meta property="og:image" content={new URL(ogImage, 'https://fabriklabs.co').href} />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:site_name" content="Fabrik Labs" />
 
@@ -37,7 +37,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://www.fabriklabs.co');
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, 'https://www.fabriklabs.co').href} />
+    <meta name="twitter:image" content={new URL(ogImage, 'https://fabriklabs.co').href} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- Google Tag Manager -->
