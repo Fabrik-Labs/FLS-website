@@ -24,7 +24,7 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<BaseLayout title={`${post.data.title} - Fabrik Labs`}>
+<BaseLayout title={`${post.data.title} - Fabrik Labs`} description={post.data.description} ogImage={post.data.featuredImage}>
   <Nav />
   
   <div class="pt-80px">

@@ -3,9 +3,17 @@ import '../styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
+  ogImage?: string;
 }
 
-const { title = 'Fabrik Labs' } = Astro.props;
+const {
+  title = 'Fabrik Labs',
+  description = 'Custom software for nonprofits and ed-tech teams. Strategy first, then execution.',
+  ogImage = '/images/og-default.png'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://www.fabriklabs.co');
 ---
 
 <!doctype html>
@@ -14,6 +22,23 @@ const { title = 'Fabrik Labs' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, 'https://www.fabriklabs.co').href} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:site_name" content="Fabrik Labs" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, 'https://www.fabriklabs.co').href} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

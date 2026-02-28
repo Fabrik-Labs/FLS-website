@@ -1,0 +1,16 @@
+# Redirects from old Wix site URLs to new Astro site URLs
+# Format: /old-path  /new-path  status-code
+
+/insights               /blog               301
+/insights/*             /blog               301
+/get-to-know-us         /about              301
+/nonprofit              /industries         301
+/educational-technology /industries         301
+/small-business         /industries         301
+/custom-engagement      /industries         301
+/product-roadmap-workshop /services          301
+/custom-development     /services           301
+/product-stewardship    /services           301
+/case-studies/autism-helper-case-study /case-studies/the-autism-helper 301
+/case-studies/4mycity-case-study /case-studies/4mycity 301
+/case-studies/alliance-decision-education-case-study /case-studies/alliance-for-decision-education 301
