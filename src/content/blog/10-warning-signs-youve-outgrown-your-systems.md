@@ -76,4 +76,4 @@ How many did you check off?
 - **3–5 symptoms:** Your systems (or lack thereof) are holding you back. The hidden costs are adding up.
 - **6+ symptoms:** You're in crisis mode. Every day you wait costs your org time, money, and mission impact.
 
-Are you ready to stop fighting your systems? [Schedule a free 30-minute consultation](https://www.fabriklabs.co/digital-systems-diagnostic) to discuss what's possible.
+Are you ready to stop fighting your systems? [Schedule a free consultation](https://cal.com/fabrikbrad/digital-systems-diagnostic) to discuss what's possible.
