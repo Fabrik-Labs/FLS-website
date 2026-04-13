@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        teal: '#2B9C9C',
+        teal: '#1F7272',        // was #2B9C9C — darkened for WCAG AA compliance
         'teal-light': '#3DB8B8',
         'teal-dark': '#238080',
-        copper: '#C75B3F',
+        copper: '#A94A31',      // was #C75B3F — darkened for WCAG AA compliance
         charcoal: '#1E2428',
         'charcoal-light': '#2C3338',
-        slate: '#8A959E',
+        slate: '#4E565E',       // was #5E6972 — darkened further for WCAG AA with font smoothing
         'slate-light': '#B0B8C2',
         'warm-gray': '#F5F3F0',
         'warm-gray-mid': '#E8E6E1',
